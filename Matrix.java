@@ -42,9 +42,9 @@ public class Matrix {
   }
   // Flip matrix by swapping elements along the diagonal
   public void flipMatrix() {
-    for (int row = 0; row < size; row++) {
-      for (int col = row + 1; col < size; col++) {
-        swap(row, col, col, row);
+    for (int row = 0; row < size - 1; row++) {
+      for (int col = 0; col < size - (1 + row); col++) {
+        swap(row, col, size - (col + 1), size - (row + 1));
       }
     }
   }
