@@ -27,6 +27,7 @@ public class Matrix {
       for (int col = 0; col < size; col++) {
         if (row + col == size - 1) {
           System.out.print("\u001B[33m" + matrix[row][col] + "\u001B[0m \t");
+          // prints only diagonal numbers in yellow and the rest of the values white
         } else {
           System.out.print(matrix[row][col] + " \t");
         }
