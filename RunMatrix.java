@@ -6,10 +6,11 @@ public class RunMatrix {
     // Print matrix of 0's based on user input
     System.out.print("Please enter the size of your matrix:");
     Scanner scan = new Scanner(System.in);
-    int input = scan.nextInt();
+    int sizeInput = scan.nextInt();
     System.out.println("Printing matrix with default values:");
-    Matrix obMatrix = new Matrix(input);
+    Matrix obMatrix = new Matrix(sizeInput);
     obMatrix.printMatrix();
+    // Calls the printMatrix method from the Matrix class to be displayed in the RunMatrix class
 
     // Populating the matrix
     System.out.print("Populating matrix...");
