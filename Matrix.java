@@ -12,7 +12,7 @@ public class Matrix {
     System.out.println("Matrix dimensions: " + dimensions + "x" + dimensions);
   }
 
-  // Populate the matrix with values from 1-(size x size)
+  // Populate the matrix with values from 1-(dimensions x dimensions)
   public void populateMatrix() {
     int value = 1;
     for (int row = 0; row < dimensions; row++) {
