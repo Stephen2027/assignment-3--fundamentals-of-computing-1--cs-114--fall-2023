@@ -1,22 +1,22 @@
 public class Matrix {
   public int[][] matrix;
-  private int dimensions;
+  private int dimension;
 
   // Constructor
-  public Matrix(int dimensions) {
-    this.dimensions = dimensions;
-    this.matrix = new int[dimensions][dimensions];
+  public Matrix(int dimension) {
+    this.dimension = dimension;
+    this.matrix = new int[dimension][dimension];
     // Initialize matrix with the specified dimensions
 
     // Print out matrix dimensions
-    System.out.println("Matrix dimensions: " + dimensions + "x" + dimensions);
+    System.out.println("Matrix dimensions: " + dimension + "x" + dimension);
   }
 
   // Populate the matrix with values from 1-(dimensions x dimensions)
   public void populateMatrix() {
     int value = 1;
-    for (int row = 0; row < dimensions; row++) {
-      for (int col = 0; col < dimensions; col++) {
+    for (int row = 0; row < dimension; row++) {
+      for (int col = 0; col < dimension; col++) {
         matrix[row][col] = value; // Assign the current value to the matrix element
         value++;
       }
@@ -24,10 +24,10 @@ public class Matrix {
   }
   // Print matrix diagonals highlighted in yellow
   public void printMatrix() {
-    for (int row = 0; row < dimensions; row++) {
-      for (int col = 0; col < dimensions; col++) {
+    for (int row = 0; row < dimension; row++) {
+      for (int col = 0; col < dimension; col++) {
         // Iterate through each row and column then check if the element is on the diagonal
-        if (row + col == dimensions - 1) {
+        if (row + col == dimension - 1) {
           System.out.print("\u001B[33m" + matrix[row][col] + "\u001B[0m \t");
           // prints only diagonal numbers in yellow and the rest of the values white
         } else {
@@ -46,10 +46,10 @@ public class Matrix {
   }
   // Flip matrix by swapping elements along the diagonal
   public void flipMatrix() {
-    for (int row = 0; row < dimensions - 1; row++) {
-      for (int col = 0; col < dimensions - (1 + row); col++) {
+    for (int row = 0; row < dimension - 1; row++) {
+      for (int col = 0; col < dimension - (1 + row); col++) {
         // Swap elements on opposite sides of the diagonal
-        swap(row, col, dimensions - (col + 1), dimensions - (row + 1));
+        swap(row, col, dimension - (col + 1), dimension - (row + 1));
       }
     }
   }
